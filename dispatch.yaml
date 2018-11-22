@@ -1,0 +1,3 @@
+dispatch:
+- url: "candypicker.lsh.fi/*"
+  service: candy-picker

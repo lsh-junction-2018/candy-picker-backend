@@ -1,0 +1,43 @@
+{
+  "name": "Candy_picker_backend",
+  "version": "1.0.0",
+  "description": "Candy picker backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=development nodemon src/index.js --exec babel-node",
+    "start": "cross-env NODE_ENV=production node index.js",
+    "prd": "cross-env NODE_ENV=production node deploy/index.js",
+    "build": "gulp build",
+    "dep": "npm run build && echo Y | ./release.sh"
+  },
+  "author": "Liu Jie",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "^2.2.2",
+    "async-mqtt": "^2.0.0",
+    "cross-env": "^5.2.0",
+    "dotenv": "^6.1.0",
+    "gulp-gzip": "^1.4.2",
+    "jsonwebtoken": "^8.3.0",
+    "koa": "^2.6.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-helmet": "^4.0.0",
+    "koa-logger": "^3.2.0",
+    "koa-respond": "^2.1.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "nodemon": "^1.18.6"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-1": "^6.24.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-debug": "^3.1.0",
+    "gulp-tar": "^2.0.0"
+  }
+}
